@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+pair<int,int> missingAndRepeating(vector<int> &arr, int n)
+{
+	// Write your code here 
+	int missing = 0;
+	vector<bool> vec(n,false);
+    pair<int,int> pr;
+	
+	for(auto X:arr)
+	{
+		if(vec[X]==true) pr.second=X;
+		else vec[X]=true;
+	}
+	for(int a=1;a<=n;a++)
+	{
+		if(vec[a]==false) {
+			pr.first=a;
+			break;
+		}
+	}
+	return pr;
+}
