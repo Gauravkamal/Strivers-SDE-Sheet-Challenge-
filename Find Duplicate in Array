@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+
+int findDuplicate(vector<int> &arr, int n){
+	// Write your code here.
+	map<int,bool> mp;
+
+	for(auto x:arr){
+		if(mp.find(x)== mp.end()){mp[x]=true;}
+		else return x;
+	}
+}
