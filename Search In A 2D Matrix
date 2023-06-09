@@ -1,0 +1,13 @@
+bool searchMatrix(vector<vector<int>>& mat, int target) {
+        for(auto x:mat)
+        {
+            for(auto y:x)
+            {
+                if(y==target) return true;
+            }
+        }
+        return false;
+}
+
+
+// this can also be solved using binary search.
