@@ -1,0 +1,25 @@
+#include <bits/stdc++.h> 
+void sort012(int *arr, int n)
+{
+   //   Write your code here
+   int count=0;
+   int ar[n];
+
+   for(int i=0;i<n;i++){      // for the ones 
+       if(*(arr+i)==0) ar[count++]=0;
+   }
+
+   for(int i=0;i<n;i++)  // for finding 1s
+   {
+      if(*(arr+i)==1) ar[count++]=1;
+   }
+   for(int i=0;i<n;i++)   // for finding 2s
+   {
+      if(*(arr+i)==2) ar[count++]=2;
+   }
+   
+   for(int i=0;i<n;i++)
+   {
+      *(arr+i) = ar[i];
+   }
+}
