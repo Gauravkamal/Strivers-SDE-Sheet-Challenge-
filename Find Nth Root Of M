@@ -1,0 +1,13 @@
+int NthRoot(int n, int m) {
+  // Write your code here.
+  bool flag=true;
+   int root;
+  int a=1;
+  while(flag){
+   root=pow(a++,n);
+    if(root>=m) flag=false;
+  }
+ //  cout<<root<<endl;
+  if(root==m) return a-1;
+   return -1;
+}
