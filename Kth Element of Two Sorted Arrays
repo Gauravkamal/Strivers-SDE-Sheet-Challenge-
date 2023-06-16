@@ -1,0 +1,41 @@
+int ninjaAndLadoos(vector<int> &row1, vector<int> &row2, int m, int n, int k) {
+    // Write your code here.
+    vector<int> res;
+
+   int a=0,b=0;
+    while(a<=m && b<=n)
+    {
+        if(a==m && b<n)
+        {
+           res.push_back(row2[b]);
+           b++;
+        }
+        else if(a<m && b==n)
+        {
+           res.push_back(row1[a]);
+           a++;
+        }
+       else if(row1[a]>row2[b]) 
+        {
+           res.push_back(row2[b]);
+           b++;
+        }
+       else if(row1[a]<row2[b])
+        {
+            res.push_back(row1[a]);
+            a++;
+        }
+       else  if(row1[a]==row2[b])
+        {
+            res.push_back(row1[a]);
+            a++;
+            res.push_back(row2[b]);
+            b++;
+        }
+    }
+    //  for(auto x: res)
+    //  {
+    //      cout<<x<<" ";
+    //  }
+    return res[k-1];
+}
